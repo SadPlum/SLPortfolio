@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 
 const useIntersectionObserver = (
-  refference: React.RefObject<HTMLElement>,
+  reference: React.RefObject<HTMLElement>,
   changeTab: (title: string) => void,
   title: string,
   options?: {
@@ -21,11 +21,11 @@ const useIntersectionObserver = (
 
   useEffect(() => {
     let observer = new IntersectionObserver(observerCallback, options);
-    let watched: any = refference.current;
-    if (refference) observer.observe(watched);
+    let watched: any = reference.current;
+    if (reference) observer.observe(watched);
     return () => {
-      if (refference) observer.unobserve(watched);
+      if (reference) observer.unobserve(watched);
     };
-  }, [refference]);
+  }, [reference]);
 };
 export default useIntersectionObserver;

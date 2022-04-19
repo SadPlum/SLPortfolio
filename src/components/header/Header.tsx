@@ -6,7 +6,7 @@ interface Props {
   about: React.RefObject<HTMLElement>;
   projects: React.RefObject<HTMLElement>;
   contact: React.RefObject<HTMLElement>;
-  changeTab: (title: string) => void;
+
   activeTab: string;
 }
 
@@ -15,7 +15,6 @@ const Header: React.FC<Props> = ({
   about,
   projects,
   contact,
-  changeTab,
   activeTab,
 }) => {
   const homeHeight: number = Number(home.current?.offsetTop);
@@ -23,9 +22,8 @@ const Header: React.FC<Props> = ({
   const projectsHeight: number = Number(projects.current?.offsetTop);
   const contactHeight: number = Number(contact.current?.offsetTop);
 
-  const tabMagic = (title: string, height: number) => {
+  const scroll = (height: number) => {
     window.scrollTo({ left: 0, top: height - 80, behavior: "smooth" });
-    changeTab(title);
   };
 
   return (
@@ -34,27 +32,27 @@ const Header: React.FC<Props> = ({
       <nav className="nav">
         <button
           className={activeTab == "home" ? "tab active" : "tab"}
-          onClick={() => tabMagic("home", homeHeight)}
+          onClick={() => scroll(homeHeight)}
         >
           <Tab title="Home" />
         </button>
         <button
           className={activeTab == "about" ? "tab active" : "tab"}
-          onClick={() => tabMagic("about", aboutHeight)}
+          onClick={() => scroll(aboutHeight)}
         >
           <Tab title="About" />
         </button>
         <button
           className={activeTab == "projects" ? "tab active" : "tab"}
           onClick={() => {
-            tabMagic("projects", projectsHeight);
+            scroll(projectsHeight);
           }}
         >
           <Tab title="Projects" />
         </button>
         <button
           className={activeTab == "contact" ? "tab active" : "tab"}
-          onClick={() => tabMagic("contact", contactHeight)}
+          onClick={() => scroll(contactHeight)}
         >
           <Tab title="Contact" />
         </button>

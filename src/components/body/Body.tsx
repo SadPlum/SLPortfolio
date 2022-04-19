@@ -14,7 +14,7 @@ function Body() {
   const [projectsSize, setProjectsSize] = useState(projectsRef);
   const contactRef = useRef<HTMLElement>(null);
   const [contactSize, setContactSize] = useState(contactRef);
-  const [activeTab, setActiveTab] = useState("home");
+  const [activeTab, setActiveTab] = useState("");
 
   useEffect(() => {
     setHomeSize((homeSize) => homeRef);
@@ -34,20 +34,27 @@ function Body() {
         about={aboutSize}
         projects={projectsSize}
         contact={contactSize}
-        changeTab={changeTab}
         activeTab={activeTab}
       />
       <section ref={homeRef} className="body-content">
-        <Home title={"home"} />
+        <Home title={"home"} reference={homeRef} changeTab={changeTab} />
       </section>
       <section ref={aboutRef} className="body-content">
-        <About title={"about"} />
+        <About title={"about"} reference={aboutRef} changeTab={changeTab} />
       </section>
       <section ref={projectsRef} className="body-content">
-        <Projects title={"projects"} />
+        <Projects
+          title={"projects"}
+          reference={projectsRef}
+          changeTab={changeTab}
+        />
       </section>
       <section ref={contactRef} className="body-content">
-        <Contact title={"contact"} />
+        <Contact
+          title={"contact"}
+          reference={contactRef}
+          changeTab={changeTab}
+        />
       </section>
     </main>
   );
