@@ -51,7 +51,7 @@ const Header: React.FC<Props> = ({
           <Tab title="Projects" />
         </button>
         <button
-          className={activeTab == "contact" ? "tab active" : "tab"}
+          className={activeTab == "contact" ? "tab active last" : "tab last"}
           onClick={() => scroll(contactHeight)}
         >
           <Tab title="Contact" />
