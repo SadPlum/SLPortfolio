@@ -30,16 +30,16 @@ function Body() {
   return (
     <main className="body">
       <Header
-        home={homeSize}
-        about={aboutSize}
-        projects={projectsSize}
-        contact={contactSize}
+        home={homeRef}
+        about={aboutRef}
+        projects={projectsRef}
+        contact={contactRef}
         activeTab={activeTab}
       />
-      <section ref={homeRef} className="body-content">
+      <section ref={homeRef} className="">
         <Home title={"home"} reference={homeRef} changeTab={changeTab} />
       </section>
-      <section ref={aboutRef} className="body-content">
+      <section ref={aboutRef} className="">
         <About title={"about"} reference={aboutRef} changeTab={changeTab} />
       </section>
       <section ref={projectsRef} className="body-content">

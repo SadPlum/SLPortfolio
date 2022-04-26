@@ -1,5 +1,6 @@
 import React from "react";
-import useIntersectionObserver from "../../Hooks/useIntersectionObserver";
+import useIntersectionObserver from "../../Hooks/useIntersectionChangeTab";
+import SingleProject from "../projects/SingleProject";
 
 interface Props {
   title: string;
@@ -12,7 +13,9 @@ const Projects: React.FC<Props> = ({ title, reference, changeTab }) => {
   useIntersectionObserver(reference, changeTab, title, options);
   return (
     <div>
-      Projects
+      <SingleProject />
+      <SingleProject />
+
       <hr />
     </div>
   );

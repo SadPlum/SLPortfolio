@@ -1,5 +1,8 @@
 .body {
   .body-content {
-    height: 800px;
+    height: 700px;
+    margin: 0;
   }
+  display: flex;
+  flex-direction: column;
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import useIntersectionObserver from "../../Hooks/useIntersectionObserver";
+import useIntersectionObserver from "../../Hooks/useIntersectionChangeTab";
 
 interface Props {
   title: string;
