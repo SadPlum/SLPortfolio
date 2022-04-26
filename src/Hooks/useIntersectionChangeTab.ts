@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 
-const useIntersectionObserver = (
-  refference: React.RefObject<HTMLElement>,
+const useIntersectionObserverChangeTab = (
+  reference: React.RefObject<HTMLElement>,
   changeTab: (title: string) => void,
   title: string,
   options?: {
@@ -13,19 +13,20 @@ const useIntersectionObserver = (
   const observerCallback = (entries: any) => {
     const entry = entries[0];
     if (entry.isIntersecting) {
-      if (entry.intersectionRatio >= 0.3) {
-        changeTab(title);
-      }
+      changeTab(title);
+    }
+    if (entry.intersectionRatio >= 0.3) {
+      changeTab(title);
     }
   };
 
   useEffect(() => {
     let observer = new IntersectionObserver(observerCallback, options);
-    let watched: any = refference.current;
-    if (refference) observer.observe(watched);
+    let watched: any = reference.current;
+    if (reference) observer.observe(watched);
     return () => {
-      if (refference) observer.unobserve(watched);
+      if (reference) observer.unobserve(watched);
     };
-  }, [refference]);
+  }, [reference]);
 };
-export default useIntersectionObserver;
+export default useIntersectionObserverChangeTab;

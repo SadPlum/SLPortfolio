@@ -1,0 +1,23 @@
+.single-project {
+  height: 250px;
+  text-align: center;
+  border: solid 2px red;
+  margin: 20px 0;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.red {
+  border: solid 2px blue;
+}
+
+@keyframes wipe-enter {
+  0% {
+    transform: scale(0, 0.025);
+  }
+  50% {
+    transform: scale(1, 0.025);
+  }
+}
