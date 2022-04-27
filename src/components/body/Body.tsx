@@ -42,7 +42,7 @@ function Body() {
       <section ref={aboutRef} className="">
         <About title={"about"} reference={aboutRef} changeTab={changeTab} />
       </section>
-      <section ref={projectsRef} className="body-content">
+      <section ref={projectsRef} className="">
         <Projects
           title={"projects"}
           reference={projectsRef}

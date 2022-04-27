@@ -12,7 +12,7 @@ const Projects: React.FC<Props> = ({ title, reference, changeTab }) => {
   const options = { threshold: 0.3 };
   useIntersectionObserver(reference, changeTab, title, options);
   return (
-    <div>
+    <div className="projects">
       <SingleProject />
       <SingleProject />
 

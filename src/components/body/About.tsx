@@ -20,7 +20,7 @@ const About: React.FC<Props> = ({ title, reference, changeTab }) => {
           My name is Sebastien. I am an Electrician turned developer. I like
           playing around with React, making little games and functional
           applications. I have worked with Civic Tech Fredericton on their Meal
-          Planner Team; finding bugs and making UI changes.
+          Planner Team.
         </p>
         <p className="about-text">
           My main focus is on front-end development, am working on my skills to
@@ -28,7 +28,7 @@ const About: React.FC<Props> = ({ title, reference, changeTab }) => {
           solver was a blast.
         </p>
         <p className="about-text">
-          I know JavaScript(ES6)/TypeScript, React, CSS/SASS, Semantic HTML and
+          I know JavaScript(ES6)/TypeScript, React, CSS/SASS, Semantic HTML, Git/GitHub and
           a touch of Node.js.
         </p>
         <p className="about-text">
