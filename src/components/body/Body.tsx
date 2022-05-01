@@ -5,6 +5,7 @@ import Contact from "./Contact";
 import Home from "./Home";
 import Header from "../header/Header";
 import Skills from "./Skills";
+import Footer from "./Footer";
 
 function Body() {
   const homeRef = useRef<HTMLElement>(null);
@@ -30,44 +31,49 @@ function Body() {
   };
 
   return (
-    
-    <main className="body">
-      
+    <>
       <Header
         home={homeRef}
         about={aboutRef}
+        skills={skillsRef}
         projects={projectsRef}
         contact={contactRef}
         activeTab={activeTab}
+        changeTab={changeTab}
       />
-      <section ref={homeRef} className="">
-        <Home title={"home"} reference={homeRef} changeTab={changeTab} />
-      </section>
-      <section ref={aboutRef} className="">
-        <About title={"about"} reference={aboutRef} changeTab={changeTab} />
-      </section>
-      <section ref={projectsRef} className="">
-        <Projects
-          title={"projects"}
-          reference={projectsRef}
-          changeTab={changeTab}
-        />
-      </section>
-      <section ref= {skillsRef}>
-        <Skills/>
-      </section>
+      <main className="body">
+        <div className="block"></div>
+        {/* only fade content up */}
+        <div className="fade-up-body content-container">
+          <section ref={homeRef} className="">
+            <Home title={"home"} reference={homeRef} changeTab={changeTab} />
+          </section>
+          <section ref={aboutRef} className="">
+            <About title={"about"} reference={aboutRef} changeTab={changeTab} />
+          </section>
+          <section ref={skillsRef}>
+            <Skills />
+          </section>
+          <section ref={projectsRef} className="">
+            <Projects
+              title={"projects"}
+              reference={projectsRef}
+              changeTab={changeTab}
+            />
+          </section>
 
-      <section ref={contactRef} className="body-content">
-        <Contact
-          title={"contact"}
-          reference={contactRef}
-          changeTab={changeTab}
-        />
-      </section>
-      <div className="backdrop">
-      </div>
-    </main>
-  
+          <section ref={contactRef} className="body-content">
+            <Contact
+              title={"contact"}
+              reference={contactRef}
+              changeTab={changeTab}
+            />
+          </section>
+        </div>
+        <div className="backdrop"></div>
+      </main>
+      <Footer />
+    </>
   );
 }
 

@@ -7,7 +7,7 @@
   justify-content: space-between;
   align-items: center;
   color: #fefcfd;
-  position: sticky;
+  position: fixed;
   height: 80px;
   top: 0;
 
@@ -38,11 +38,12 @@
       padding-bottom: 5px;
       background-color: #000505;
       color: #fefcfd;
+      color: rgb(212, 209, 212);
       border: none;
       cursor: pointer;
     }
     .active {
-      border-bottom: 1px solid #fefcfd;
+      border-bottom: 1px solid rgb(212, 209, 212);
     }
     .last {
       margin-right: 0;
