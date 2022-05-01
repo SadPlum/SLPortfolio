@@ -120,9 +120,8 @@
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  background: black;
-  background: -webkit-gradient(linear, left top, left bottom, from(white), color-stop(80%, #8b30b2), to(#7d20a5));
-  background: linear-gradient(180deg, white 0%, #8b30b2 80%, #7d20a5 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(white), color-stop(80%, #b9b8b9), to(#8b878b));
+  background: linear-gradient(180deg, white 0%, #b9b8b9 80%, #8b878b 100%);
 }
 
 .home .name-mobile {
@@ -174,7 +173,7 @@
 
 .home .home-icons {
   width: 50px;
-  margin-bottom: 15px;
+  margin-bottom: 25px;
 }
 
 .home .lightning-bolt {
@@ -311,17 +310,15 @@
 }
 
 .about {
-  background: #7d20a5;
+  background: #8b878b;
   height: 100%;
   padding-bottom: 25px;
   margin: auto;
 }
 
 .about .about-me {
-  background: #ffffff;
-  width: calc(100% -40px);
-  margin: 0 40px;
-  padding: 20px 20px;
+  width: calc(100% - 40px);
+  margin: 0 20px;
   text-align: center;
   border-radius: 10px;
 }
@@ -335,11 +332,12 @@
 
 .about .about-me .about-text {
   margin-bottom: 15px;
-  line-height: 1.2rem;
+  line-height: 1.4rem;
+  font-size: 1.2rem;
 }
 
 .projects {
-  background-color: #7d20a5;
+  background: #812ca5;
 }
 
 .single-project {

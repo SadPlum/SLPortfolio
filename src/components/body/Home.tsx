@@ -30,26 +30,31 @@ const Home: React.FC<Props> = ({ title, reference, changeTab }) => {
           <h2 className="info-heading">Hi, welcome to my portfolio.</h2>
           <p className="info-parag">
             <p className="info-text">I'm a front-end developer,</p>
-            <img
+            {/* <img
+              src={reactLogo}
+              className="home-icons react-img react-spin"
+              alt=""
+            /> */}
+            <p className="info-text">aspiring full-stack</p>
+            {/* <img
+              src={fullStack}
+              className="home-icons full-stack stack-bounce"
+              alt=""
+            /> */}
+            <p className="info-text"> and Journeyman Electrician.</p>
+            {/* <img
+              src={lightningBolt}
+              className="home-icons lightning-bolt lightning-fade"
+              alt=""
+            /> */}
+          </p>
+        </div>
+      </article>
+          <img
               src={reactLogo}
               className="home-icons react-img react-spin"
               alt=""
             />
-            <p className="info-text">aspiring full-stack</p>
-            <img
-              src={fullStack}
-              className="home-icons full-stack stack-bounce"
-              alt=""
-            />
-            <p className="info-text"> and Journeyman Electrician.</p>
-            <img
-              src={lightningBolt}
-              className="home-icons lightning-bolt lightning-fade"
-              alt=""
-            />
-          </p>
-        </div>
-      </article>
     </section>
   );
 };

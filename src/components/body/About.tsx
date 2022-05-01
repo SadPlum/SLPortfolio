@@ -27,10 +27,7 @@ const About: React.FC<Props> = ({ title, reference, changeTab }) => {
           do full-stack, and like solving algorythmic problems; making a sudoku
           solver was a blast.
         </p>
-        <p className="about-text">
-          I know JavaScript(ES6)/TypeScript, React, CSS/SASS, Semantic HTML, Git/GitHub and
-          a touch of Node.js.
-        </p>
+
         <p className="about-text">
           In my spare time I like to play board games, taste the latest
           craft-brews and fiddle on my bass.

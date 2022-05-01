@@ -4,31 +4,35 @@ import Projects from "./Projects";
 import Contact from "./Contact";
 import Home from "./Home";
 import Header from "../header/Header";
+import Skills from "./Skills";
 
 function Body() {
   const homeRef = useRef<HTMLElement>(null);
-  const [homeSize, setHomeSize] = useState(homeRef);
+  // const [homeSize, setHomeSize] = useState(homeRef);
   const aboutRef = useRef<HTMLElement>(null);
-  const [aboutSize, setAboutSize] = useState(aboutRef);
+  // const [aboutSize, setAboutSize] = useState(aboutRef);
   const projectsRef = useRef<HTMLElement>(null);
-  const [projectsSize, setProjectsSize] = useState(projectsRef);
+  const skillsRef = useRef<HTMLElement>(null);
+  // const [projectsSize, setProjectsSize] = useState(projectsRef);
   const contactRef = useRef<HTMLElement>(null);
-  const [contactSize, setContactSize] = useState(contactRef);
+  // const [contactSize, setContactSize] = useState(contactRef);
   const [activeTab, setActiveTab] = useState("");
 
-  useEffect(() => {
-    setHomeSize((homeSize) => homeRef);
-    setAboutSize((aboutSize) => aboutRef);
-    setProjectsSize((projectsSize) => projectsRef);
-    setContactSize((contactSize) => contactRef);
-  }, [homeRef, aboutRef, projectsRef, contactRef]);
+  // useEffect(() => {
+  //   setHomeSize((homeSize) => homeRef);
+  //   setAboutSize((aboutSize) => aboutRef);
+  //   setProjectsSize((projectsSize) => projectsRef);
+  //   setContactSize((contactSize) => contactRef);
+  // }, [homeRef, aboutRef, projectsRef, contactRef]);
 
   const changeTab = (title: string) => {
     setActiveTab(title);
   };
 
   return (
+    
     <main className="body">
+      
       <Header
         home={homeRef}
         about={aboutRef}
@@ -49,6 +53,10 @@ function Body() {
           changeTab={changeTab}
         />
       </section>
+      <section ref= {skillsRef}>
+        <Skills/>
+      </section>
+
       <section ref={contactRef} className="body-content">
         <Contact
           title={"contact"}
@@ -56,7 +64,10 @@ function Body() {
           changeTab={changeTab}
         />
       </section>
+      <div className="backdrop">
+      </div>
     </main>
+  
   );
 }
 

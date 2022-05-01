@@ -1,14 +1,15 @@
 .about {
-  background: rgb(125, 32, 165);
+  // background:  rgb(129, 44, 165);
+  background:     rgb(139, 135, 139)   ;
   height: 100%;
   padding-bottom: 25px;
   margin: auto;
  
   .about-me {
-    background: #ffffff;
-    width: calc(100% -40px);
-    margin: 0 40px;
-    padding: 20px 20px;
+    // background: #ffffff;
+    width: calc(100% - 40px);
+    margin: 0 20px;
+    // padding: 20px 20px;
     text-align: center;
     border-radius: 10px;
     @media (min-width: $md) {
@@ -17,7 +18,8 @@
     }
     .about-text {
       margin-bottom: 15px;
-      line-height: 1.2rem;
+      line-height: 1.4rem;
+      font-size:1.2rem;
     }
   }
 }
