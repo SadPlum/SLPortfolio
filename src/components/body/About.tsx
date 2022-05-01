@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import Br from "../br/Br";
 import useIntersectionObserver from "../../Hooks/useIntersectionChangeTab";
 
 interface Props {
@@ -8,17 +9,22 @@ interface Props {
 }
 
 const About: React.FC<Props> = ({ title, reference, changeTab }) => {
+  const p1: string =
+    "My name is Sebastien. I am an Electrician turned developer. I like playing around with React, making little games and funcitonal applications. I have worked with Civic Tech Fredericton on their Meal Planner Team.";
+
   const options = { threshold: 0.2 };
 
   useIntersectionObserver(reference, changeTab, title, options);
+
+  useEffect(() => {});
   return (
     <section className="about">
-      {" "}
+      <Br tag="p" />{" "}
       <article className="about-me">
         <p className="about-text">
           {" "}
-          My name is Sebastien. I am an Electrician turned developer. I like
-          playing around with React, making little games and functional
+          My name is <i>Sebastien</i>. I am an Electrician turned developer. I
+          like playing around with React, making little games and functional
           applications. I have worked with Civic Tech Fredericton on their Meal
           Planner Team.
         </p>
@@ -33,6 +39,7 @@ const About: React.FC<Props> = ({ title, reference, changeTab }) => {
           craft-brews and fiddle on my bass.
         </p>
       </article>
+      <Br tag="/p" />
     </section>
   );
 };

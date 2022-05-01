@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import useIntersectionObserver from "../../Hooks/useIntersectionChangeTab";
 import facepicture from "../../images/facepicture.jpg";
 import facepicturelg from "../../images/resizedface.png";
 import reactLogo from "../../images/React-icon.png";
 import fullStack from "../../images/full-stack-icon.png";
 import lightningBolt from "../../images/lightning-bolt.png";
+import Br from "../br/Br";
+import Typewritter from "../typewritter/Typewritter";
 
 interface Props {
   title: string;
@@ -13,11 +15,18 @@ interface Props {
 }
 
 const Home: React.FC<Props> = ({ title, reference, changeTab }) => {
+  const [p1Done, setp1Done] = useState(false);
+
+  const [p2Done, setp2Done] = useState(false);
+
   const options = { threshold: 0.3 };
+
   useIntersectionObserver(reference, changeTab, title, options);
   return (
     <section className="home">
-      <h1 className="name-mobile">Sebastien Legault</h1>
+      <div className="name-mobile-container">
+        <h1 className="name-mobile">Sebastien Legault</h1>
+      </div>
       <article className="home-content">
         <div className="face-picture-box">
           <img
@@ -28,33 +37,17 @@ const Home: React.FC<Props> = ({ title, reference, changeTab }) => {
         </div>
         <div className="info">
           <h2 className="info-heading">Hi, welcome to my portfolio.</h2>
-          <p className="info-parag">
-            <p className="info-text">I'm a front-end developer,</p>
-            {/* <img
-              src={reactLogo}
-              className="home-icons react-img react-spin"
-              alt=""
-            /> */}
-            <p className="info-text">aspiring full-stack</p>
-            {/* <img
-              src={fullStack}
-              className="home-icons full-stack stack-bounce"
-              alt=""
-            /> */}
-            <p className="info-text"> and Journeyman Electrician.</p>
-            {/* <img
-              src={lightningBolt}
-              className="home-icons lightning-bolt lightning-fade"
-              alt=""
-            /> */}
-          </p>
+          <div className="info-parag">
+            <Typewritter text="I'm a front-end developer," setter={setp1Done} />
+
+            {p1Done && (
+              <Typewritter text="aspiring full-stack," setter={setp2Done} />
+            )}
+
+            {p2Done && <Typewritter text="and Journeyman Electrician." />}
+          </div>
         </div>
       </article>
-          <img
-              src={reactLogo}
-              className="home-icons react-img react-spin"
-              alt=""
-            />
     </section>
   );
 };
