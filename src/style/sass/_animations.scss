@@ -1,5 +1,5 @@
 .fade-up-animation {
-  animation: fade-up 1s linear;
+  animation: fade-up 0.6s linear;
 }
 
 @keyframes fade-up {
@@ -7,7 +7,7 @@
     transform: translateY(100px);
     opacity: 0;
   }
-  50% {
+  75% {
     opacity: 0.25;
   }
   100% {
@@ -21,7 +21,7 @@
     transform: translateY(100px);
     opacity: 0;
   }
-  50% {
+  75% {
     opacity: 0.25;
   }
   100% {
@@ -34,7 +34,7 @@
     transform: translateY(100px);
     opacity: 0;
   }
-  50% {
+  75% {
     opacity: 0.25;
   }
   100% {
@@ -43,47 +43,41 @@
   }
 }
 
-.fade-up-body {
-  animation: fade-enter 0.75s linear;
+.fade-enter-body {
+  animation: fade-enter 0.5s linear;
 }
 
 @keyframes fade-enter {
   0% {
-    transform: translateY(150px);
     opacity: 0;
   }
   50% {
     opacity: 0.25;
   }
   100% {
-    transform: translateY(0px);
     opacity: 1;
   }
 }
 
 @-moz-keyframes fade-enter {
   0% {
-    transform: translateY(150px);
     opacity: 0;
   }
   50% {
     opacity: 0.25;
   }
   100% {
-    transform: translateY(0px);
     opacity: 1;
   }
 }
 @-webkit-keyframes fade-enter {
   0% {
-    transform: translateY(150px);
     opacity: 0;
   }
   50% {
     opacity: 0.25;
   }
   100% {
-    transform: translateY(0px);
     opacity: 1;
   }
 }

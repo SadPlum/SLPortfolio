@@ -13,7 +13,6 @@ const useIntersectionAnimation = (
     const entry = entries[0];
     if (entry.isIntersecting) {
       changeState(true);
-      console.log(true);
     }
   };
   useEffect(() => {

@@ -1,0 +1,18 @@
+.contact {
+  text-align: center;
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  .contact-icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .contact-icon {
+      width: 100px;
+      margin: 10px;
+    }
+  }
+  .contact-link {
+    color: $off-black;
+    text-decoration: none;
+  }
+}

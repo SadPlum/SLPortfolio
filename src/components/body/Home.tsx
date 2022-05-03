@@ -14,23 +14,26 @@ interface Props {
   changeTab: (title: string) => void;
 }
 
-const Home: React.FC<Props> = ({ title,  changeTab }) => {
+const Home: React.FC<Props> = ({ title, changeTab }) => {
   const [p1Done, setp1Done] = useState(false);
   const [p2Done, setp2Done] = useState(false);
   const homeRef = useRef(null);
-  const nameRef = useRef(null);
+  const faceRef = useRef(null);
+  const topRef = useRef(null);
 
   const options = { threshold: 0.3 };
 
   useIntersectionObserver(homeRef, changeTab, title, options);
-  useIntersectionObserver(nameRef, changeTab, title, options);
+  useIntersectionObserver(faceRef, changeTab, title, options);
+  useIntersectionObserver(topRef, changeTab, title, options);
   return (
     <section className="home">
+      <div ref={topRef}></div>
       <div className="name-mobile-container">
-        <h1 ref={nameRef} className="name-mobile">Sebastien Legault</h1>
+        <h1 className="name-mobile">Sebastien Legault</h1>
       </div>
       <article className="home-content">
-        <div className="face-picture-box">
+        <div ref={faceRef} className="face-picture-box">
           <img
             src={facepicturelg}
             alt="Picture of Sebastien Legault"
@@ -38,7 +41,9 @@ const Home: React.FC<Props> = ({ title,  changeTab }) => {
           />
         </div>
         <div className="info">
-          <h2 ref={homeRef} className="info-heading">Hello there, <br/> welcome to my portfolio.</h2>
+          <h2 ref={homeRef} className="info-heading">
+            Hi, <br /> welcome to my portfolio.
+          </h2>
           <div className="info-parag">
             <Typewritter text="I'm a front-end developer," setter={setp1Done} />
 

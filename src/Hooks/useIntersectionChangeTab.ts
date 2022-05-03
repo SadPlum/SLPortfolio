@@ -12,11 +12,10 @@ const useIntersectionObserverChangeTab = (
 ) => {
   const observerCallback = (entries: any) => {
     const entry = entries[0];
+
     if (entry.isIntersecting) {
       changeTab(title);
-    }
-    if (entry.intersectionRatio >= 0.3) {
-      changeTab(title);
+      window.history.pushState({}, "", `/${title}`);
     }
   };
 
