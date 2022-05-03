@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo } from "react";
+import React, { useState, useRef } from "react";
 import useIntersectionObserver from "../../Hooks/useIntersectionChangeTab";
 import facepicture from "../../images/facepicture.jpg";
 import facepicturelg from "../../images/resizedface.png";
@@ -10,22 +10,24 @@ import Typewritter from "../typewritter/Typewritter";
 
 interface Props {
   title: string;
-  reference: React.RefObject<HTMLElement>;
+
   changeTab: (title: string) => void;
 }
 
-const Home: React.FC<Props> = ({ title, reference, changeTab }) => {
+const Home: React.FC<Props> = ({ title,  changeTab }) => {
   const [p1Done, setp1Done] = useState(false);
-
   const [p2Done, setp2Done] = useState(false);
+  const homeRef = useRef(null);
+  const nameRef = useRef(null);
 
   const options = { threshold: 0.3 };
 
-  useIntersectionObserver(reference, changeTab, title, options);
+  useIntersectionObserver(homeRef, changeTab, title, options);
+  useIntersectionObserver(nameRef, changeTab, title, options);
   return (
     <section className="home">
       <div className="name-mobile-container">
-        <h1 className="name-mobile">Sebastien Legault</h1>
+        <h1 ref={nameRef} className="name-mobile">Sebastien Legault</h1>
       </div>
       <article className="home-content">
         <div className="face-picture-box">
@@ -36,7 +38,7 @@ const Home: React.FC<Props> = ({ title, reference, changeTab }) => {
           />
         </div>
         <div className="info">
-          <h2 className="info-heading">Hi, welcome to my portfolio.</h2>
+          <h2 ref={homeRef} className="info-heading">Hello there, <br/> welcome to my portfolio.</h2>
           <div className="info-parag">
             <Typewritter text="I'm a front-end developer," setter={setp1Done} />
 

@@ -19,7 +19,7 @@ const About: React.FC<Props> = ({ title, reference, changeTab }) => {
   useEffect(() => {});
   return (
     <section className="about">
-      <Br tag="p" />{" "}
+      <Br tag="main" />{" "}
       <article className="about-me">
         <p className="about-text">
           {" "}
@@ -39,7 +39,7 @@ const About: React.FC<Props> = ({ title, reference, changeTab }) => {
           craft-brews and fiddle on my bass.
         </p>
       </article>
-      <Br tag="/p" />
+      <Br tag="/main" />
     </section>
   );
 };

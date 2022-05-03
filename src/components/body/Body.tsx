@@ -13,8 +13,8 @@ function Body() {
   const aboutRef = useRef<HTMLElement>(null);
   // const [aboutSize, setAboutSize] = useState(aboutRef);
   const projectsRef = useRef<HTMLElement>(null);
-  const skillsRef = useRef<HTMLElement>(null);
-  // const [projectsSize, setProjectsSize] = useState(projectsRef);
+
+  
   const contactRef = useRef<HTMLElement>(null);
   // const [contactSize, setContactSize] = useState(contactRef);
   const [activeTab, setActiveTab] = useState("");
@@ -35,7 +35,6 @@ function Body() {
       <Header
         home={homeRef}
         about={aboutRef}
-        skills={skillsRef}
         projects={projectsRef}
         contact={contactRef}
         activeTab={activeTab}
@@ -46,14 +45,14 @@ function Body() {
         {/* only fade content up */}
         <div className="fade-up-body content-container">
           <section ref={homeRef} className="">
-            <Home title={"home"} reference={homeRef} changeTab={changeTab} />
+            <Home title={"home"} changeTab={changeTab} />
           </section>
           <section ref={aboutRef} className="">
             <About title={"about"} reference={aboutRef} changeTab={changeTab} />
-          </section>
-          <section ref={skillsRef}>
             <Skills />
           </section>
+         
+         
           <section ref={projectsRef} className="">
             <Projects
               title={"projects"}

@@ -4,7 +4,7 @@ import Tab from "./Tab";
 interface Props {
   home: React.RefObject<HTMLElement>;
   about: React.RefObject<HTMLElement>;
-  skills: React.RefObject<HTMLElement>;
+ 
   projects: React.RefObject<HTMLElement>;
   contact: React.RefObject<HTMLElement>;
   activeTab: string;
@@ -14,7 +14,7 @@ interface Props {
 const Header: React.FC<Props> = ({
   home,
   about,
-  skills,
+  
   projects,
   contact,
   activeTab,
@@ -22,7 +22,6 @@ const Header: React.FC<Props> = ({
 }) => {
   const homeHeight: number = Number(home.current?.offsetTop);
   const aboutHeight: number = Number(about.current?.offsetTop);
-  const skillsHeight: number = Number(skills.current?.offsetTop);
   const projectsHeight: number = Number(projects.current?.offsetTop);
   const contactHeight: number = Number(contact.current?.offsetTop);
 
@@ -46,12 +45,7 @@ const Header: React.FC<Props> = ({
         >
           <Tab title="About" />
         </button>
-        <button
-          className={activeTab === "skills" ? "tab active" : "tab"}
-          onClick={() => scroll(skillsHeight, "skills")}
-        >
-          <Tab title="Skills" />
-        </button>
+     
 
         <button
           className={activeTab === "projects" ? "tab active" : "tab"}

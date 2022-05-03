@@ -147,11 +147,11 @@
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  padding-bottom: 35px;
+  height: 100vh;
 }
 
 .home .name-mobile {
-  margin-top: 25px;
+  margin-top: 15px;
   display: block;
   font-size: 2rem;
 }
@@ -163,7 +163,7 @@
 }
 
 .home .home-content {
-  margin-top: 25px;
+  margin-top: 15px;
 }
 
 .home .face-picture-box {
@@ -196,15 +196,6 @@
 
 .home .info .info-parag .info-text {
   margin-bottom: 15px;
-}
-
-.home .home-icons {
-  width: 50px;
-  margin-bottom: 25px;
-}
-
-.home .lightning-bolt {
-  opacity: 0;
 }
 
 .home .react-spin {
@@ -393,6 +384,10 @@
   margin: auto;
 }
 
+.footer {
+  background: red;
+}
+
 .single-project {
   text-align: center;
   border-bottom: 1px black solid;
@@ -421,7 +416,7 @@
   font-family: "Shadows Into Light", cursive;
   font-style: italic;
   font-weight: 500;
-  width: 25px;
+  width: 55px;
   margin: auto;
   margin-bottom: 35px;
 }

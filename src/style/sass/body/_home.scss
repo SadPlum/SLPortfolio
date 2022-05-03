@@ -12,10 +12,11 @@
   //   rgb(212, 209, 212) 80%,
   //   rgb(185, 184, 185) 100%
   // );
-  padding-bottom: 35px;
+  
+  height: 100vh;
 
   .name-mobile {
-    margin-top: 25px;
+    margin-top: 15px;
     display: block;
     font-size: 2rem;
     @media (min-width: $md) {
@@ -23,7 +24,7 @@
     }
   }
   .home-content {
-    margin-top: 25px;
+    margin-top: 15px;
   }
   .face-picture-box {
     width: 320px;
@@ -47,13 +48,6 @@
         margin-bottom: 15px;
       }
     }
-  }
-  .home-icons {
-    width: 50px;
-    margin-bottom: 25px;
-  }
-  .lightning-bolt {
-    opacity: 0;
   }
 
   // ANIMATIONS
