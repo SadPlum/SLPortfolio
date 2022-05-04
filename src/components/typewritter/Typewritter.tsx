@@ -19,7 +19,7 @@ const Typewritter: React.FC<Props> = ({ text, setter }) => {
       }
       setCurrentText((currentText) => currentText + text.charAt(index.current));
       index.current += 1;
-    }, 40);
+    }, 35);
   }, [currentText, text, setter]);
 
   return (

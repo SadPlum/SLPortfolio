@@ -11,24 +11,24 @@ function Skills() {
     <div className="skills">
       <div className="row">
         <div className="logo-container">
-          <img src={htmlLogo} alt="" className="logo" />
+          <img src={htmlLogo} alt="HTML Language Logo" className="logo" />
         </div>
         <div className="logo-container">
-          <img src={cssLogo} alt="" className="logo" />
+          <img src={cssLogo} alt="CSS Language Logo" className="logo" />
         </div>
         <div className="logo-container">
-          <img src={jsLogo} alt="" className="logo" />
+          <img src={jsLogo} alt="JavaScript Language Logo" className="logo" />
         </div>
       </div>
       <div className="row">
         <div className="logo-container">
-          <img src={reactLogo} alt="" className="logo" />
+          <img src={reactLogo} alt="React Language Logo" className="logo" />
         </div>
         <div className="logo-container">
-          <img src={sassLogo} alt="" className="logo" />
+          <img src={sassLogo} alt="SASS Language Logo" className="logo" />
         </div>
         <div className="logo-container">
-          <img src={tsLogo} alt="" className="logo" />
+          <img src={tsLogo} alt="TypeScript Language Logo" className="logo" />
         </div>
       </div>
     </div>

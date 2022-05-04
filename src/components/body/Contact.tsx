@@ -34,8 +34,8 @@ const Contact: React.FC<Props> = ({ title, changeTab }) => {
             alt="LinkedIn Icon Logo"
           />
         </a>
-        <a className="contact-icon" href={resume} download>
-          <img src={resumeIcon} alt="" />
+        <a href={resume} download>
+          <img src={resumeIcon} className="contact-icon" alt="" />
         </a>
       </div>
       <div className="contact-info">

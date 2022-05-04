@@ -21,11 +21,23 @@ const SingleProject: React.FC<Props> = ({ title, image, description }) => {
         // fade-up-animation
       }
     >
-      <div className="project-content">
+      <div className="project-content-front">
         <div className="project-img-box">
-          <img className="project-img" src={image} alt="" />
+          <img className="project-img-sm" src={image} alt="" />
         </div>
-        <h3 className="project-title">{title}</h3>
+        <div className="project-head">
+          <h3 className=" project-title">{title}</h3>
+        </div>
+      </div>
+      <div className="project-content-back">
+        <div className="project-img-box project-back">
+          <img className="project-img-sm-back" src={image} alt="" />
+          <p className="project-text">{description}</p>
+        </div>
+
+        <div className="project-head">
+          <div className=" project-links"></div>
+        </div>
       </div>
     </article>
   );
