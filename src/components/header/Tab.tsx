@@ -5,7 +5,7 @@ interface Props {
 }
 
 function Tab({ title }: Props) {
-  return <div>{title}</div>;
+  return <span>{title}</span>;
 }
 
 export default Tab;
