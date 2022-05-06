@@ -12,6 +12,9 @@
     width: 80%;
     margin: auto;
     margin-bottom: 35px;
+    @media (min-width: $md) {
+      margin-bottom: 50px;
+    }
   }
   .logo {
     width: 80px;
