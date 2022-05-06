@@ -1,27 +1,104 @@
 .single-project {
   text-align: center;
+  background: $light-text;
 
-  border-bottom: 1px black solid;
-  .project-content {
-    margin-bottom: 15px;
+  width: 90%;
+  margin: auto;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
+  padding-top: 15px;
+  @media (min-width: $md) {
+    margin-bottom: 100px;
   }
-}
+  // for flip
+  perspective: 1000px;
+  transition: transform 0.5s;
+  transform-style: preserve-3d;
 
-.project-img {
-  padding: 15px;
-}
+  &:hover {
+    transform: rotateY(180deg);
+  }
+  &:active {
+    transform: rotateY(180deg);
+  }
 
-.temp-img {
-  width: 100%;
-  height: 300px;
-  background-color: rgb(180, 209, 180);
-}
+  .project-head {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .project-title {
+      line-height: 1.3rem;
+      font-size: 1.5rem;
+    }
+  }
 
-.project-title {
-  line-height: 1.3rem;
-  font-size: 1.5rem;
-}
+  .project-content-front {
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
 
-.project-img {
-  width: 300px;
+    height: 100%;
+    width: 100%;
+    .project-img-box {
+      height: 350px;
+
+      .project-img-sm {
+        width: 300px;
+        height: 350px;
+        object-fit: cover;
+        object-position: center top;
+      }
+    }
+  }
+  .project-content-back {
+    transform: rotateY(180deg);
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    position: absolute;
+
+    .project-img-box {
+      height: 350px;
+      margin-bottom: 15px;
+      .project-img-sm-back {
+        opacity: 0.2;
+        width: 300px;
+        height: 350px;
+        object-fit: cover;
+        object-position: center top;
+      }
+    }
+    .project-article {
+      position: absolute;
+      text-align: center;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      margin: 15px;
+      .project-note {
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
+    }
+    .project-head {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      .project-links {
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-evenly;
+
+        .project-icon {
+          width: 50px;
+        }
+      }
+    }
+  }
 }

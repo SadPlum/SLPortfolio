@@ -1,3 +1,5 @@
+// FADE UP USED FOR ABOUT SECTION
+
 .fade-up-animation {
   animation: fade-up 0.6s linear;
 }
@@ -42,6 +44,8 @@
     opacity: 1;
   }
 }
+
+// FADE USED FOR MAIN BODY
 
 .fade-enter-body {
   animation: fade-enter 0.5s linear;

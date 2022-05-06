@@ -20,22 +20,25 @@ const Contact: React.FC<Props> = ({ title, changeTab }) => {
   return (
     <section className="contact" ref={contactRef1}>
       <div className="contact-icon-container">
-        <a href="https://github.com/SadPlum/">
+        <a href="https://github.com/SadPlum/" target="_blank">
           <img
             className="contact-icon"
             src={githubIcon}
             alt="GitHub Icon Logo"
           />
         </a>
-        <a href="https://www.linkedin.com/in/sebastien-legault-b33938160/">
+        <a
+          href="https://www.linkedin.com/in/sebastien-legault-b33938160/"
+          target="_blank"
+        >
           <img
             className="contact-icon"
             src={linkedinIcon}
             alt="LinkedIn Icon Logo"
           />
         </a>
-        <a className="contact-icon" href={resume} download>
-          <img src={resumeIcon} alt="" />
+        <a href={resume} download>
+          <img src={resumeIcon} className="contact-icon" alt="" />
         </a>
       </div>
       <div className="contact-info">

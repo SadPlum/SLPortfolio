@@ -3,8 +3,15 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
+
+  min-height: calc(90vh - 80px);
+
+  margin-bottom: 1vh;
+  @media (min-height: 700px) {
+    margin-top: 10vh;
+  }
   @media (min-width: $md) {
-    margin-top: 40px;
+    padding-top: 0;
   }
   .name-mobile {
     margin-top: 15px;
