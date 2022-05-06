@@ -15,7 +15,6 @@ const useIntersectionObserverChangeTab = (
 
     if (entry.isIntersecting) {
       changeTab(title);
-      window.history.pushState({}, "", `/${title}`);
     }
   };
 
