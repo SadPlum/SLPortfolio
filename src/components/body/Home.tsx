@@ -29,6 +29,7 @@ const Home: React.FC<Props> = ({ title, changeTab }) => {
   return (
     <section className="home">
       <div ref={topRef}></div>
+
       <div className="name-mobile-container">
         <h1 className="name-mobile">Sebastien Legault</h1>
       </div>
@@ -40,10 +41,12 @@ const Home: React.FC<Props> = ({ title, changeTab }) => {
             className="face-picture"
           />
         </div>
-        <div className="info">
+        <div className="info-title">
           <h2 ref={homeRef} className="info-heading">
             Hi, <br /> welcome to my portfolio.
           </h2>
+        </div>
+        <div className="info">
           <div className="info-parag">
             <Typewritter text="I'm a front-end developer," setter={setp1Done} />
 

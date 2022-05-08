@@ -5,16 +5,28 @@
   flex-wrap: wrap;
   width: 100%;
   margin: auto;
+  margin-top: 35px;
+  @media (min-width: $md) {
+    margin-top: 50px;
+  }
 
   .row {
     display: flex;
     justify-content: space-between;
-    width: 80%;
+    width: 100%;
     margin: auto;
     margin-bottom: 35px;
     @media (min-width: $md) {
       margin-bottom: 50px;
     }
+  }
+  .logo-container {
+    // background: rgb(185, 184, 185);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
   }
   .logo {
     width: 80px;
