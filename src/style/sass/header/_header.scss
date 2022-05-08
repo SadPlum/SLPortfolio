@@ -12,8 +12,9 @@
   top: 0;
 
   .name {
-    font-weight: 400;
+    font-weight: 500;
     margin-left: 25px;
+    font-size: 1.8rem;
     font-style: italic;
     @media (min-width: $sm) {
       display: none;

@@ -3,59 +3,85 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
+  justify-content: center;
+  height: calc(100vh - 80px);
 
-  min-height: calc(90vh - 80px);
+  margin-bottom: 10vh;
+  @media (min-height: 1024px) {
+    margin-bottom: 1vh;
+  }
 
-  margin-bottom: 1vh;
   @media (min-height: 700px) {
-    margin-top: 10vh;
+    // margin-top: 10vh;
   }
   @media (min-width: $md) {
     padding-top: 0;
   }
+
   .name-mobile {
-    margin-top: 15px;
     display: block;
-    font-size: 2rem;
+    font-size: 2.2rem;
+    margin: 20px 0;
     @media (min-width: $md) {
       display: none;
     }
   }
   .home-content {
-    margin-top: 15px;
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
   }
   .face-picture-box {
-    width: 320px;
-    margin: auto;
+    margin: 0 auto;
     display: flex;
     justify-content: center;
     .face-picture {
       border-radius: 50%;
       width: 250px;
+      height: 250px;
       @media (min-width: $md) {
-        width: 400px;
+        width: 320px;
+        height: 320px;
       }
     }
   }
-  .info {
-    margin: auto;
-    margin-top: 25px;
+
+  .info-title {
     line-height: 1.4;
     font-size: 1.2rem;
     @media (min-width: $md) {
       margin-top: 40px;
       line-height: 1.6;
+      font-size: 2.4rem;
+    }
+  }
+
+  .info {
+    line-height: 1.4;
+    font-size: 1.2rem;
+
+    @media (min-width: $md) {
+      margin-top: 40px;
+      line-height: 1.6;
       font-size: 2rem;
+      height: 30%;
     }
     .info-parag {
-      margin-top: 25px;
-      height: 150px;
+      height: 120px;
+      display: flex;
+      flex-direction: column;
+
       @media (min-width: $md) {
-        margin-top: 40px;
         height: 300px;
       }
       .info-text {
-        margin-bottom: 15px;
+        height: 40px;
+        @media (min-width: $md) {
+          height: 100px;
+        }
       }
     }
   }

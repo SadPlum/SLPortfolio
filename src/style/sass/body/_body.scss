@@ -1,4 +1,5 @@
 .body {
+  min-height: 665px;
   .block {
     height: 80px;
     position: sticky;
@@ -7,7 +8,7 @@
 
   display: flex;
   flex-direction: column;
-  max-width: 600px;
+  max-width: 800px;
   margin: auto;
   .content-container {
     z-index: 1;
@@ -17,10 +18,12 @@
     background: linear-gradient(
       180deg,
       rgb(185, 184, 185) 0%,
-      rgb(202, 170, 202) 70%,
+      rgb(202, 170, 202) 20%,
 
+      rgb(144, 66, 177) 70%,
       rgb(144, 66, 177) 100%
     );
+    // background: rgb(196, 127, 226);
     height: 100vh;
     width: 100%;
     position: fixed;
