@@ -147,18 +147,11 @@
       -ms-flex-pack: center;
           justify-content: center;
   height: calc(100vh - 80px);
-  margin-bottom: 10vh;
-}
-
-@media (min-height: 1024px) {
-  .home {
-    margin-bottom: 1vh;
-  }
 }
 
 @media (min-width: 481px) {
   .home {
-    padding-top: 0;
+    padding-top: 20px;
   }
 }
 
@@ -200,6 +193,7 @@
 }
 
 .home .face-picture-box .face-picture {
+  margin-bottom: 20px;
   border-radius: 50%;
   width: 250px;
   height: 250px;
@@ -215,11 +209,11 @@
 .home .info-title {
   line-height: 1.4;
   font-size: 1.2rem;
+  margin-bottom: 20px;
 }
 
 @media (min-width: 481px) {
   .home .info-title {
-    margin-top: 40px;
     line-height: 1.6;
     font-size: 2.4rem;
   }
@@ -232,7 +226,6 @@
 
 @media (min-width: 481px) {
   .home .info {
-    margin-top: 40px;
     line-height: 1.6;
     font-size: 2rem;
     height: 30%;
@@ -262,7 +255,7 @@
 
 @media (min-width: 481px) {
   .home .info .info-parag .info-text {
-    height: 100px;
+    height: 80px;
   }
 }
 
