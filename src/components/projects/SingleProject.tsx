@@ -1,5 +1,4 @@
-import React, { useState, useRef } from "react";
-import useIntersectionAnimation from "../../Hooks/useIntersectionAnimation";
+import React, {  useRef } from "react";
 import gitHubIcon from "../../images/icons8-github-192.png";
 import webIcon from "../../images/icons8-web-100.png";
 
@@ -20,14 +19,10 @@ const SingleProject: React.FC<Props> = ({
   websiteURL,
   githubURL,
 }) => {
-  const [visible, setVisible] = useState(false);
-  const [projectTitle, setProjectTitle] = useState("title");
-  const projectRef = useRef<HTMLElement>(null);
-  useIntersectionAnimation(projectRef, setVisible);
 
   return (
     <section
-      ref={projectRef}
+     
       className= "single-project"
     >
       <article className="project-flip-box">

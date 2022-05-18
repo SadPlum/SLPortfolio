@@ -23,7 +23,7 @@ const Projects: React.FC<Props> = ({ title, changeTab }) => {
         <SingleProject
           title="Sudoku"
           image={sudokuSm}
-          note="Game is playable. It will be impleted with React, Typescript, tests and be refactored."
+          note="Game is playable. Currently being implement with React, Typescript and a backend."
           description="
           A simple sudoku game. Can generate it's own board, or solve one of yours; both through recursion. Was first designed 
           to solve games through logic by iterating through all the potential numbers of each."
@@ -45,8 +45,8 @@ const Projects: React.FC<Props> = ({ title, changeTab }) => {
         <SingleProject
           title="Portfolio Website"
           image={portfolio}
-          note="Project needs refining and refactoring. Spacing of height on very large screens is odd"
-          description="The current site you're visitng. My first attempt at a portfolio website."
+          note="Always being updated and improved based on feedback"
+          description="The current site you're visiting. My first attempt at a portfolio website."
           websiteURL="https://sebastienlegault.com"
           githubURL="https://github.com/SadPlum/SLPortfolio"
         />

@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import useIntersectionObserver from "../../Hooks/useIntersectionChangeTab";
-import useIntersectionAnimation from "../../Hooks/useIntersectionAnimation";
+import useIntersectionVisible from "../../Hooks/useIntersectionVisible";
 import Skills from "./Skills";
 
 interface Props {
@@ -10,14 +10,22 @@ interface Props {
 }
 
 const About: React.FC<Props> = ({ title, changeTab }) => {
+  // if visible, then use animation
   const [visible, setVisible] = useState(false);
+
+  // options for intersection observer
   const options = { threshold: 0.2 };
+
+  // ref for navbar change tab
   const aboutRef1 = useRef(null);
   const aboutRef2 = useRef(null);
+
+  // ref for fade-up animation
   const animationRef = useRef(null);
+  
   useIntersectionObserver(aboutRef1, changeTab, title, options);
   useIntersectionObserver(aboutRef2, changeTab, title, options);
-  useIntersectionAnimation(animationRef, setVisible);
+  useIntersectionVisible(animationRef, setVisible);
 
   useEffect(() => {});
   return (

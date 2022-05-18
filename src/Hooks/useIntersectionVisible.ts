@@ -1,6 +1,10 @@
 import { useEffect } from "react";
 
-const useIntersectionAnimation = (
+
+
+// If element (reference) is visible, change state to true
+
+const useIntersectionVisible = (
   reference: React.RefObject<HTMLElement>,
   changeState: (arg: boolean) => void,
   options?: {
@@ -25,4 +29,4 @@ const useIntersectionAnimation = (
   }, [reference]);
 };
 
-export default useIntersectionAnimation;
+export default useIntersectionVisible;
