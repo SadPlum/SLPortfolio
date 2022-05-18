@@ -1,12 +1,7 @@
 import React, { useState, useRef } from "react";
 import useIntersectionObserver from "../../Hooks/useIntersectionChangeTab";
-import facepicture from "../../images/facepicture.jpg";
 import facepicturelg from "../../images/resizedface.png";
-import reactLogo from "../../images/React-icon.png";
-import fullStack from "../../images/full-stack-icon.png";
-import lightningBolt from "../../images/lightning-bolt.png";
-import Br from "../br/Br";
-import Typewritter from "../typewritter/Typewritter";
+import Typewriter from "../typewriter/Typewriter";
 
 interface Props {
   title: string;
@@ -15,8 +10,10 @@ interface Props {
 }
 
 const Home: React.FC<Props> = ({ title, changeTab }) => {
+  // only run typewriter effect if previous line is complete
   const [p1Done, setp1Done] = useState(false);
   const [p2Done, setp2Done] = useState(false);
+  // Refs for changing tab
   const homeRef = useRef(null);
   const faceRef = useRef(null);
   const topRef = useRef(null);
@@ -48,13 +45,13 @@ const Home: React.FC<Props> = ({ title, changeTab }) => {
         </div>
         <div className="info">
           <div className="info-parag">
-            <Typewritter text="I'm a front-end developer," setter={setp1Done} />
+            <Typewriter text="I'm a front-end developer," setter={setp1Done} />
 
             {p1Done && (
-              <Typewritter text="aspiring full-stack," setter={setp2Done} />
+              <Typewriter text="aspiring full-stack," setter={setp2Done} />
             )}
 
-            {p2Done && <Typewritter text="and Journeyman Electrician." />}
+            {p2Done && <Typewriter text="and Journeyman Electrician." />}
           </div>
         </div>
       </article>

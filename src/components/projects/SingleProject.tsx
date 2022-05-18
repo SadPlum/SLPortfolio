@@ -28,10 +28,7 @@ const SingleProject: React.FC<Props> = ({
   return (
     <section
       ref={projectRef}
-      className={
-        visible ? "single-project " : "single-project"
-        // fade-up-animation
-      }
+      className= "single-project"
     >
       <article className="project-flip-box">
         {/* front of card */}

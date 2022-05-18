@@ -9,9 +9,19 @@
   justify-content: center;
   margin-bottom: 35px;
   padding-top: 15px;
-
   @media (min-width: $md) {
     margin-bottom: 50px;
+  }
+  // Flip if hover or tap whole card
+  &:hover {
+    .project-flip-box{
+      transform: rotateY(180deg);
+    }
+  }
+  &:active {
+    .project-flip-box{
+      transform: rotateY(180deg);
+    }
   }
   // for flip
   .project-flip-box {
@@ -21,12 +31,8 @@
     transform-style: preserve-3d;
     border: 1px solid black;
     margin-bottom: 25px;
-    &:hover {
-      transform: rotateY(180deg);
-    }
-    &:active {
-      transform: rotateY(180deg);
-    }
+  
+
     .project-img-box {
       height: 400px;
       .project-img-sm {

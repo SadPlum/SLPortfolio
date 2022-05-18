@@ -266,7 +266,7 @@
 
 @media (min-width: 481px) {
   .about {
-    width: 80%;
+    width: 100%;
   }
 }
 
@@ -453,6 +453,16 @@
   }
 }
 
+.single-project:hover .project-flip-box {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.single-project:active .project-flip-box {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
 .single-project .project-flip-box {
   height: 400px;
   -webkit-perspective: 1000px;
@@ -465,16 +475,6 @@
           transform-style: preserve-3d;
   border: 1px solid black;
   margin-bottom: 25px;
-}
-
-.single-project .project-flip-box:hover {
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
-}
-
-.single-project .project-flip-box:active {
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
 }
 
 .single-project .project-flip-box .project-img-box {

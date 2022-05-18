@@ -5,10 +5,11 @@ interface Props {
   setter?: (value: boolean) => void;
 }
 
-const Typewritter: React.FC<Props> = ({ text, setter }) => {
+const Typewriter: React.FC<Props> = ({ text, setter }) => {
   const index = useRef(0);
   const [currentText, setCurrentText] = useState("");
 
+  // loops over string for typewriter effect. Let
   useEffect(() => {
     setTimeout(() => {
       if (currentText.length === text.length) {
@@ -29,4 +30,4 @@ const Typewritter: React.FC<Props> = ({ text, setter }) => {
   );
 };
 
-export default Typewritter;
+export default Typewriter;
