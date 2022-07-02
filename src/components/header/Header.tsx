@@ -4,7 +4,7 @@ import Tab from "./Tab";
 interface Props {
   home: React.RefObject<HTMLElement>;
   about: React.RefObject<HTMLElement>;
- 
+
   projects: React.RefObject<HTMLElement>;
   contact: React.RefObject<HTMLElement>;
   activeTab: string;
@@ -14,7 +14,7 @@ interface Props {
 const Header: React.FC<Props> = ({
   home,
   about,
-  
+
   projects,
   contact,
   activeTab,
@@ -31,7 +31,7 @@ const Header: React.FC<Props> = ({
 
   return (
     <header className="header">
-      <h2 className="name">Sebastien Legault</h2>
+      <h2 className="name">Sébastien Legault</h2>
       <nav className="nav">
         <button
           className={activeTab === "home" ? "tab active" : "tab"}
@@ -45,7 +45,6 @@ const Header: React.FC<Props> = ({
         >
           <Tab title="About" />
         </button>
-     
 
         <button
           className={activeTab === "projects" ? "tab active" : "tab"}

@@ -1,6 +1,6 @@
 .single-project {
   text-align: center;
-  width: 60%;
+  width: 100%;
   margin: auto;
   border-radius: 3px;
   display: flex;
@@ -12,32 +12,91 @@
   @media (min-width: $md) {
     margin-bottom: 50px;
   }
-  // Flip if hover or tap whole card
-  &:hover {
-    .project-flip-box{
-      transform: rotateY(180deg);
+
+  // PROJECT TITLE
+  .project-title-box {
+    @media (min-width: $lg) {
+      margin-bottom: 20px;
+    }
+
+    .project-title {
+      font-size: 2.2rem;
     }
   }
-  &:active {
-    .project-flip-box{
-      transform: rotateY(180deg);
+
+  // CONTENT BELOW TITLE
+
+  .project-content {
+    display: flex;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @media (min-width: $lg) {
+      flex-direction: row;
     }
   }
+
+  // PROJECT DESCRIPTION
+
+  //
+  .project-description-box {
+    @media (min-width: $md) {
+      margin: 0 20px;
+    }
+
+    .project-description {
+      margin: 20px;
+      font-size: 1.2rem;
+      @media (min-width: $lg) {
+        font-size: 1.4rem;
+      }
+    }
+    .project-video {
+      @media (max-width: 365px) {
+        display: none;
+      }
+      max-width: 365px;
+      margin: 0 5px;
+      @media (min-width: $md) {
+        max-width: 600px;
+      }
+      @media (min-width: $lg) {
+        max-width: 500px;
+        height: 300px;
+      }
+    }
+  }
+
+  // PROJECT CARD (RIGHT)
+
+  // class for intersection observer
+  .flip-effect {
+    transform: rotateY(180deg);
+  }
+
   // for flip
   .project-flip-box {
-    height: 400px;
+    // Flip if hover or tap whole card
+    &:active {
+      transform: rotateY(180deg);
+    }
+    &:hover {
+      transform: rotateY(180deg);
+    }
+
+    height: 500px;
     perspective: 1000px;
     transition: transform 0.5s;
     transform-style: preserve-3d;
     border: 1px solid black;
-    margin-bottom: 25px;
-  
+    margin: 20px;
 
     .project-img-box {
-      height: 400px;
+      height: 500px;
       .project-img-sm {
         width: 300px;
-        height: 400px;
+        height: 500px;
         object-fit: cover;
         object-position: center top;
       }
@@ -86,7 +145,16 @@
         width: 100%;
         flex-direction: row;
         justify-content: space-evenly;
-
+        .project-url {
+          height: 70px;
+          width: 70px;
+          background: white;
+          border-radius: 50%;
+          margin-bottom: 40px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
         .project-icon {
           width: 50px;
         }

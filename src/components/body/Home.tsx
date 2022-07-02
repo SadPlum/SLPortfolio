@@ -11,8 +11,8 @@ interface Props {
 }
 
 const Home: React.FC<Props> = ({ title, changeTab }) => {
-// options for intersection observer
-const options = { threshold: 0.3 };
+  // options for intersection observer
+  const options = { threshold: 0.3 };
 
   // only run typewriter effect if previous line is complete & visible
   const [p1Visible, setP1Visible] = useState(false);
@@ -20,9 +20,8 @@ const options = { threshold: 0.3 };
   const [p2Visible, setP2Visible] = useState(false);
   const [p2Done, setP2Done] = useState(false);
   const [p3Visible, setP3Visible] = useState(false);
- 
 
-  // Refs for typewriter 
+  // Refs for typewriter
   const p1Ref = useRef(null);
   const p2Ref = useRef(null);
   const p3Ref = useRef(null);
@@ -36,7 +35,6 @@ const options = { threshold: 0.3 };
   const homeRef = useRef(null);
   const faceRef = useRef(null);
   const topRef = useRef(null);
-
 
   // Change tab on nav
   useIntersectionChangeTab(homeRef, changeTab, title, options);
@@ -62,20 +60,22 @@ const options = { threshold: 0.3 };
             Hi, <br /> welcome to my portfolio.
           </h2>
         </div>
-          <div className="info">
-            <div className="info-parag">
-            <div ref= {p1Ref}>
-              {p1Visible &&  <Typewriter text="I'm a front-end developer," setter={setP1Done} />}
-          
+        <div className="info">
+          <div className="info-parag">
+            <div ref={p1Ref}>
+              {p1Visible && (
+                <Typewriter text="Full-Stack developer," setter={setP1Done} />
+              )}
             </div>
             <div ref={p2Ref}>
               {p1Done && p2Visible && (
-                <Typewriter text="aspiring full-stack," setter={setP2Done} />
+                <Typewriter text="Focussing on React," setter={setP2Done} />
               )}
             </div>
             <div ref={p3Ref}>
               {p2Done && p3Visible && (
-              <Typewriter text="and Journeyman Electrician." />)}
+                <Typewriter text="and a bit of Node for the Back-End." />
+              )}
             </div>
           </div>
         </div>
