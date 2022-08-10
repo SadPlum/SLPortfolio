@@ -58,7 +58,7 @@ const Projects: React.FC<Props> = ({ title, changeTab }) => {
         project (as per the demo site), but I wanted to test myself and expand into Full-Stack. I first struggled with the base design and layout, but bounced ideas off some great graphic
          designers I know and they helped guide me into making a nice looking, functional website."
           gifURL="https://media0.giphy.com/media/XNcqbe6Lw2kwYJBuz4/giphy.gif"
-          websiteURL="https://perfect-pup.herokuapp.com/about"
+          websiteURL="https://netlify--perfectpup.netlify.app/home"
           githubURL="https://github.com/SadPlum/perfect-pup"
         />
       </div>
